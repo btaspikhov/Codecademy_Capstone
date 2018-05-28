@@ -298,7 +298,6 @@ describe('MenuItem Table', function() {
     });
   });
 });
-/*
 describe('GET /api/employees', function() {
   before(function(done) {
     seed.seedEmployeeDatabase(done);
@@ -763,7 +762,7 @@ describe('DELETE /api/employees/:employeeId/timesheets/:timesheetId', function()
         .expect(404);
   });
 });
-*/
+
 describe('GET /api/menus', function() {
   before(function(done) {
     seed.seedMenuDatabase(done);

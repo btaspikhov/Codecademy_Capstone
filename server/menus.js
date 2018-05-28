@@ -225,16 +225,7 @@ menusRouter.put('/:menuId/menu-items/:menuItemId', (req, res, next) => {
     const menuItemId = req.params.menuItemId;
 
     db.serialize(() => {
-        db.get(`SELECT * from Menu WHERE id=$menuId`, 
-            {
-                $menuId: menuId  
-            }, function(error, rows) {
-                if (error) {
-                  return;
-                } else if (!rows) {
-                    res.status(404).send();
-                }
-            });
+        
         db.get(`SELECT * from MenuItem WHERE id=$menuItemId`, 
             {
                 $menuItemId: menuItemId  
